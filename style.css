@@ -27,8 +27,9 @@ section:nth-child(odd) {
   background-color: #f7f7f7;
 }
 
-section.intro {
-  text-align: center;
+/* 仅针对.intro下的.content类应用左对齐 */
+section.intro .content {
+  text-align: left;
 }
 
 section.intro h2, section.intro h5 {
@@ -114,10 +115,6 @@ body.dragging section {
   height: 40px;
   width: 100%;
   z-index: -1;
-}
-
-.content-left {
-    text-align: left;
 }
 
 body.dragging {
