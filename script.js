@@ -91,3 +91,24 @@ $( ".draggable" ).draggable({
     $('body').removeClass('dragging');
   }
 });
+
+
+// 再生ボタン
+$('.play-btn').click(function () {
+  $('#carousel-js-sample').carousel('cycle');
+});
+// 停止ボタン
+$('.stop-btn').click(function () {
+  $('#carousel-js-sample').carousel('pause');
+});
+
+// スライド開始したら発動
+$('#carousel-js-sample').on('slide.bs.carousel', function () {
+  // キャプションを隠す
+  $('#carousel-js-sample .carousel-caption').hide();
+});
+// スライドが停止したら発動
+$('#carousel-js-sample').on('slid.bs.carousel', function () {
+  // キャプションをフェードインさせる
+  $('#carousel-js-sample .carousel-caption').fadeIn();
+});
